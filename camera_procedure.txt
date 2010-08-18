@@ -1,0 +1,59 @@
+
+
+
+Charge Battery. (Canon NB-5L works best)
+
+Clean off mem card
+- DCIM/101CANON and DCIM/100CANON
+  need to have all content removed
+
+Make sure correct version of script (mint.lua) is installed
+into CHDK/SCRIPTS/mint.lua. Script is available at github
+at INSERTURL. Note that the card needs to be 'read-write"
+mode to work on most card readers for editing the script.
+
+The memory card needs to be "read-only" to boot into chdk. Note
+that is READ-ONLY. Yes, the opposite of what makes sense. This is
+also known as "lock" mode on some cards. The little write protect
+tab needs to be moved away from the card contacts. 
+
+
+For pre flight testing and fiddling, it is probably a good idea to
+do it with a backup battery, so we have a nice fresh full battery
+to put in the camera immediately before the flight. 
+
+Start up Procecure
+
+1. Verify memory card  (currently a "easystore 2gb" card, dark blue) 
+   is "locked"
+
+2. Card into camera.
+
+3. Battery into camera
+
+4. Verify flash is "off"  (working on getting this into the script...)
+
+5. Verify that review is off.
+
+	To check this, hit the "print" button above the direction pad,
+	then "menu" to get into the regular (aka, not chdk) menus.
+
+6. Verify the camera is in "camera" mode. The red slr looking icon on the
+    mode wheel at the top right. Also the second mode down from the top.
+
+7. As set, the script is loaded on start up, but doesn't start running
+   until the shutter is pressed. 
+
+   On startup you should see the "chdk" splash screen. If this is not
+   the case, the card is probably not in the right "locked" state. 
+
+   In camera mode, you should see "minimal intervalemter" on the screen. 
+
+   To start the script, press the shutter button. 
+
+   Camera should display  WHATS IT SHOW?
+
+8. Camera should be ready to go now. It will take a pic every 15 seconds,
+   as well as log camera temp and battery voltages to baloon_log.txt 
+
+
