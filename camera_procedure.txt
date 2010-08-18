@@ -41,6 +41,11 @@ Start up Procecure
 6. Verify the camera is in "camera" mode. The red slr looking icon on the
     mode wheel at the top right. Also the second mode down from the top.
 
+7. Verify we are in "auto" mode
+
+8. Verify that we are in "focus to infinity"
+   FIXME: in theory, the script should be doing this now
+
 7. As set, the script is loaded on start up, but doesn't start running
    until the shutter is pressed. 
 
