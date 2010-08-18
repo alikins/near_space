@@ -7,10 +7,27 @@
 --]]
  
 Interval = a*60000 + b*1000
+
+-- use a timestamped name so we don't clobber log files by accident. again...
+logfilename = string.format("A/%d.log", os.time())
+
 --logfile=io.open("A/baloon_temp.log","wb")
+
+-- from http://chdk.setepontos.com/index.php/topic,3935.msg52317.html#msg52317
+-- switch to autofocus mode, focus on infinity, then go to manual focus mode
+function light_reading()
+   set_aflock(0)
+   press("shoot_half")
+   sleep(2000)
+   set_focus(65535)
+   set_aflock(1)
+   release("shoot_half")
+   sleep(500)
+end
  
+
 function TakePicture()
-	logfile=io.open("A/baloon_temp.log", "ab")
+	logfile=io.open(logfilename, "ab")
 	logfile:seek("end")
 	press("shoot_half")
         repeat sleep(50) until get_shooting() == true
@@ -30,6 +47,10 @@ function TakePicture()
 	-- is probably even better battery wise
 	set_backlight(0)
 end
+
+
+-- focus to infinity
+light_reading()
  
 repeat
 	StartTick = get_tick_count()
