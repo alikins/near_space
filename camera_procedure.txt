@@ -56,9 +56,11 @@ Start up Procecure
 
    To start the script, press the shutter button. 
 
-   Camera should display  WHATS IT SHOW?
+   Camera should display "STARTED" in the bottom left. Note, the display
+   will turn off once the photo is taken.
+
 
 8. Camera should be ready to go now. It will take a pic every 15 seconds,
-   as well as log camera temp and battery voltages to baloon_log.txt 
-
+   as well as log camera temp and battery voltages to a timestampe named
+   file in the root of the camera dir.
 
